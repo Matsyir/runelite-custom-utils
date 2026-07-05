@@ -63,8 +63,8 @@ public class InventoryTagConfigGenerator
 				ItemEquipmentStats s = itemStats.getEquipment();
 				if (s != null)
 				{
-					boolean hasOffensives = s.getAmagic() > 0 && s.getArange() > 0 && (s.getStr() > 0 || s.getAslash() > 0 || s.getAstab() > 0 || s.getAcrush() > 0);
-					if (hasOffensives)
+					boolean hasOffensives = s.getAmagic() > 0 || s.getMdmg() > 0 || s.getArange() > 0 || s.getRstr() > 0 || s.getStr() > 0 || s.getAslash() > 0 || s.getAstab() > 0 || s.getAcrush() > 0;
+					if (!hasOffensives)
 					{
 						continue;
 					}
